@@ -67,7 +67,7 @@ The way we did this was when the hook is running after container is created, it 
 
 ## Future Work
 
-- Develop a more suitable plugin for our use case. It should handle restarts or crashes to make sure no containers are missed during the time where the plugin is running.
+- Develop a more suitable plugin for our use case. It should handle restarts or crashes to make sure no containers are missed during the time where the plugin is not running.
 - Benchmark KubeArmor performance to get the difference between the polling model and the event driven model and see the effect of changing models in CPU usage, container monitoring downtime and container start delays.
 
 ## Acknowledgments
