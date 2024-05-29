@@ -43,7 +43,7 @@ So, it turned out, in order for KubeArmor to register new containers and monitor
 ### Communication with KubeArmor
 
 After the hook manages to get container data needed, it needs to send these data to KubeArmor. This can easily be done using UNIX sockets. The idea is KubeArmor can listen on a socket that is mounted on host so the hook can connect to it and pass container data.
-The communication is kept very simple. Hooks send containers and the operation to do on these containers (add or remove) and KubeArmor responds with whether it managed to apply this operation or not. KubeArmor response is important because it is used also to synchronize with a hook sending in multiple messages so KubeArmor can parse them with no issues. It also signals whehter KubeArmor is ready to receive messages about new containers or is it still waiting for previous containers to be sent first (more on that later).
+The communication is kept very simple. Hooks send containers and the operation to do on these containers (add or remove) and KubeArmor responds with whether it managed to apply this operation or not. KubeArmor response is important because it is used also to synchronize with a hook sending in multiple messages so KubeArmor can parse them with no issues. It also signals whether KubeArmor is ready to receive messages about new containers or is it still waiting for previous containers to be sent first (more on that later).
 
 ### Hook Injection
 
